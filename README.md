@@ -1,12 +1,12 @@
 # Order Management System
 
-Sistema simples de microsservicos para demonstrar comunicacao entre APIs, orquestracao com Docker Compose e mensageria com RabbitMQ.
+Sistema simples de microsserviços para demonstrar comunicação entre APIs, orquestração com Docker Compose e mensageria com RabbitMQ.
 
-## Servicos
+## Serviços
 
-- `product-service`: mantem um catalogo em memoria e reserva estoque.
+- `product-service`: mantém um catálogo em memória e reserva estoque.
 - `order-service`: cria pedidos, consulta o `product-service` via HTTP e publica evento de pedido criado.
-- `notification-service`: consome eventos do RabbitMQ e registra notificacoes processadas.
+- `notification-service`: consome eventos do RabbitMQ e registra notificações processadas.
 
 ## Tecnologias
 
@@ -26,7 +26,7 @@ cp .env.example .env
 docker compose up --build
 ```
 
-Servicos:
+Serviços:
 
 ```text
 product-service: http://localhost:8081
@@ -57,7 +57,7 @@ POST http://localhost:8082/api/orders
 }
 ```
 
-3. Consulte notificacoes:
+3. Consulte notificações:
 
 ```http
 GET http://localhost:8083/api/notifications
@@ -65,8 +65,8 @@ GET http://localhost:8083/api/notifications
 
 ## Aprendizados Demonstrados
 
-- Separacao de responsabilidades por servico.
-- Comunicacao HTTP entre microsservicos.
-- Publicacao e consumo de eventos com RabbitMQ.
-- Orquestracao local com Docker Compose.
-- Portas e variaveis de ambiente por servico.
+- Separação de responsabilidades por serviço.
+- Comunicação HTTP entre microsserviços.
+- Publicação e consumo de eventos com RabbitMQ.
+- Orquestração local com Docker Compose.
+- Portas e variáveis de ambiente por serviço.
